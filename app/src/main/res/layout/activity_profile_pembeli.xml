@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="16dp"
+    android:layout_height="match_parent"
+    tools:context=".ProfilePembeli">
+
+    <ImageView
+        android:id="@+id/btLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="37dp"
+        android:onClick="fLogout"
+        android:background="@drawable/ic_baseline_logout_24" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btLogout"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutDataPengguna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivProfilePengguna"
+                    android:layout_width="88sp"
+                    android:layout_height="88sp"
+                    android:layout_marginRight="32sp"
+                    android:background="@drawable/list_rounded" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="88sp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvNamaPengguna"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Nama Pengguna"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvEmailPengguna"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4sp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="alamat email pengguna"
+                        android:textColor="@color/abuGelap"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutGamifikasi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layoutDataPengguna"
+                android:layout_marginTop="40dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="8sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_horizontal"
+                    android:text="Anda telah hemat"
+                    android:textColor="@color/biruGelap"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvJmlhHemat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/abuGelap"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16sp"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center_horizontal"
+                    android:text="*Rp1.000.000 sebelum anda menjadi member gold"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_horizontal"
+                    android:text="Voucher anda sebagai member silver"
+                    android:textColor="@color/biruGelap"
+                    android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvVoucher"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/card_voucher" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/nbMenu"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/custom_navbar"
+        android:orientation="horizontal"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="10dp">
+
+        <ImageButton
+            android:id="@+id/btHome"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/ic_house"
+            android:onClick="fKeBerandaPembeli"
+            android:padding="36dp" />
+
+        <ImageButton
+            android:id="@+id/btJelajah"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/ic_jelajah"
+            android:onClick="fKeJelajah"
+            android:padding="36dp" />
+
+        <ImageButton
+            android:id="@+id/btProfil"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/ic_user"
+            android:padding="32dp" />
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

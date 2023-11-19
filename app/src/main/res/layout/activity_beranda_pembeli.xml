@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BerandaPembeli"
+    android:background="@color/background"
+    android:paddingTop="24dp"
+    android:paddingLeft="16dp"
+    android:orientation="vertical"
+    android:paddingRight="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvJudulLokasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:fontFamily="@font/poppins"
+                android:text="Alamat kamu saat ini: "
+                android:textColor="@color/abu"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tvLokasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvJudulLokasi"
+                android:layout_marginTop="4sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Lokasi pengguna "
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/ivppUser"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="fKeProfilPembeli"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRekomendasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvLokasi"
+                android:layout_marginTop="28sp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Rekomendasi Makanan"
+                android:textColor="@color/biruGelap"
+                android:textSize="20sp"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvListProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvRekomendasi"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
+                android:onClick="fKeProduk"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/card_produk" />
+
+
+            <TextView
+                android:id="@+id/tvToko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rvListProduk"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Rekomendasi Toko"
+                android:textColor="@color/biruGelap"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rvListProduk"
+                android:layout_marginTop="25sp"
+                android:fontFamily="@font/poppins"
+                android:gravity="right"
+                android:onClick="fKeJelajah"
+                android:text="Selengkapnya"
+                android:textColor="@color/biruGelap"
+                android:textSize="12sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvListToko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvToko"
+                android:layout_marginTop="4dp"
+                android:onClick="fKeToko"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/card_store" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/nbMenu"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/custom_navbar"
+        android:orientation="horizontal"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="10dp">
+
+        <ImageButton
+            android:id="@+id/btHome"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/ic_house"
+            android:padding="36dp" />
+
+        <ImageButton
+            android:id="@+id/btJelajah"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/ic_jelajah"
+            android:onClick="fKeJelajah"
+            android:padding="36dp" />
+
+        <ImageButton
+            android:id="@+id/btProfil"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/ic_user"
+            android:onClick="fKeProfilPembeli"
+            android:padding="32dp" />
+
+    </LinearLayout>
+</RelativeLayout>

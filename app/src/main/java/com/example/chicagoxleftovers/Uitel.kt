@@ -1,0 +1,16 @@
+package com.example.chicagoxleftovers
+
+import android.widget.ImageView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+//import com.malkinfo.addinformationfirebase.R
+
+
+fun ImageView.loadImage(uri: String?){
+    val option = RequestOptions().placeholder(R.mipmap.ic_launcher)
+        .error(R.mipmap.ic_launcher)
+    Glide.with(context)
+        .setDefaultRequestOptions(option)
+        .load(uri)
+        .into(this)
+}

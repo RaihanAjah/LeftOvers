@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Jelajah"
+    android:paddingTop="24sp"
+    android:paddingLeft="16sp"
+    android:paddingRight="16sp">
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/list_rounded"
+        android:drawableEnd="@drawable/ic_baseline_search_24"
+        android:gravity="center_vertical"
+        android:hint="Cari toko disini.."
+        android:paddingLeft="12sp"
+        android:paddingRight="12sp"
+        tools:ignore="TouchTargetSizeCheck"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/etSearch"
+        android:layout_marginTop="36sp"
+        android:layout_marginBottom="16sp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListStore"
+            android:onClick="fKeToko"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/card_store" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/nbMenu"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/custom_navbar"
+        android:orientation="horizontal"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="10dp">
+
+        <ImageButton
+            android:id="@+id/btHome"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/ic_house"
+            android:onClick="fKeBerandaPembeli"
+            android:padding="36dp" />
+
+        <ImageButton
+            android:id="@+id/btJelajah"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/ic_jelajah"
+            android:padding="36dp" />
+
+        <ImageButton
+            android:id="@+id/btProfil"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/ic_user"
+            android:onClick="fKeProfilePembeli"
+            android:padding="32dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

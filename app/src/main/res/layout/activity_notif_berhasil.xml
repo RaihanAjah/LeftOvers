@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotifBerhasil"
+    android:background="@drawable/background_app">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_keyboard_backspace_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="60dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Kirim Makanan"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="180dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/pana"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="480dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="Makanan anda sudah sampai!"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvNotif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="505dp"
+            android:fontFamily="@font/poppins"
+            android:text="Silakan terima pesanan anda"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/btRating"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNotif"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_button_biru"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Beri Rating"
+            android:textAllCaps="false"
+            android:textColor="#FAFAFA" />
+
+        <Button
+            android:id="@+id/btKeBeranda"
+            android:layout_below="@id/btRating"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Kembali ke beranda"
+            android:onClick="fKeBeranda"
+            android:textColor="@color/biruUtama"
+            android:background="@drawable/custom_button"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+</ScrollView>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "139719514970",
+    "project_id": "chicagoxleftovers-90946",
+    "storage_bucket": "chicagoxleftovers-90946.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139719514970:android:a2cb7da7c16e9be3fd7163",
+        "android_client_info": {
+          "package_name": "com.example.chicagoxleftovers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139719514970-6cd5cmbas642adabbesoqku3kpqqilgl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxjiGUVT_VCGWscGIk4A32HdXCGaakQTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139719514970-6cd5cmbas642adabbesoqku3kpqqilgl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

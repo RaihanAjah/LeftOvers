@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="#FAFAFA"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:id="@+id/layoutProdukCard"
+        android:layout_width="157dp"
+        android:layout_height="251dp"
+        android:background="@drawable/list_rounded"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/ivFotoProduk"
+            android:layout_width="145sp"
+            android:layout_height="115sp"
+            android:background="@drawable/list_rounded" />
+
+        <TextView
+            android:id="@+id/tvNamaProduk"
+            android:layout_width="145sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:layout_marginBottom="4sp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Nama Produk"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tvTanggal"
+            android:layout_width="145sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12sp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Tanggal produksi"
+            android:textColor="@color/abuGelap"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvHargaAsli"
+            android:layout_width="145sp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="harga produk"
+            android:textColor="@color/biruGelap"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvIdToko"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="idToko"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

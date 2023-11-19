@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="20dp">
+
+
+    <TextView
+        android:id="@+id/tvJudulRate"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center_horizontal"
+        android:text="Rating Toko Ini"
+        android:textColor="@color/biruGelap"
+        android:textSize="18dp"/>
+
+    <RatingBar
+        android:id="@+id/rbRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvJudulRate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12sp"
+        android:backgroundTint="@color/abu"
+        android:progressTint="#FBC813"/>
+
+    <TextView
+        android:id="@+id/tvSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rbRating"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Ceritakan pengalaman anda"
+        android:textColor="@color/biruGelap"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/etUlasan"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:layout_below="@+id/tvSectionTitle"
+        android:layout_marginTop="12sp"
+        android:background="@drawable/list_rounded"
+        android:gravity="top"
+        android:hint="Berikan ulasan anda"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:paddingHorizontal="12sp"
+        android:paddingVertical="4sp"/>
+
+    <Button
+        android:id="@+id/btTambahUlasan"
+        android:layout_below="@+id/etUlasan"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:textAllCaps="false"
+        android:text="Kirim"
+        android:background="@drawable/custom_button_biru"
+        android:textColor="#FAFAFA"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btBatal"
+        android:layout_below="@+id/btTambahUlasan"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:textAllCaps="false"
+        android:text="Batal"
+        android:background="@drawable/custom_button"
+        android:textColor="@color/biruGelap"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="16sp"/>
+
+
+</RelativeLayout>
